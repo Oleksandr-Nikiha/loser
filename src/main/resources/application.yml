@@ -1,0 +1,25 @@
+server:
+    port: "8181"
+
+spring:
+    application:
+        name: "loser"
+        version: "0.0.1"
+    cache:
+        type: "simple"
+        jcache:
+            config: classpath:ehcache.xml
+
+api:
+    privatbank: "https://api.privatbank.ua/p24api/exchange_rates?json&date=%s"
+
+
+
+logging:
+    level:
+        root: "INFO"
+        org:
+            springframework:
+                web: "DEBUG"
+    pattern:
+        console: "%d{yyyy-MM-dd HH:mm:ss} - %logger{36} - %msg%n"
